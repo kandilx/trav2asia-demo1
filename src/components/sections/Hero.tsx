@@ -17,7 +17,7 @@ const tiles = [
   },
   {
     src: "/images/hero-1.jpg",
-    alt: "A night street-food truck with a fish-shaped griddle and menu boards in Japan",
+    alt: "A chef cooking wagyu at a lit teppan counter in a Japanese food stall at night",
     label: "Japan",
     className: "hidden sm:block sm:col-span-2 sm:row-span-3",
   },
@@ -33,9 +33,9 @@ export function Hero() {
   return (
     <section id="top" aria-labelledby="hero-heading" className="pt-24 pb-16 sm:pt-28 lg:pb-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-12">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-12">
           <div className="lg:col-span-5">
-            <p className="text-xs font-bold tracking-[0.2em] text-teal uppercase">Not just places. Stories.</p>
+            <p className="text-xs font-bold tracking-[0.2em] text-teal uppercase">Six countries. Eighteen experiences.</p>
             <h1
               id="hero-heading"
               className="mt-5 text-[2.9rem] leading-[0.95] font-bold tracking-tight text-balance sm:text-6xl lg:text-[4.25rem]"
@@ -43,7 +43,7 @@ export function Hero() {
               Go beyond <span className="font-hand text-[1.18em] font-semibold text-orange-deep">the postcard.</span>
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-soft">
-              From hidden food spots to unforgettable local adventures, discover Asia one experience at a time.
+              Street food walks, pottery studios and sunrise hikes, with the price and group size shown up front.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
