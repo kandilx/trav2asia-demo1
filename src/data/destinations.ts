@@ -23,7 +23,7 @@ export const destinations: Destination[] = [
     featuredCity: "Jaipur",
     tagline: "Pink sandstone bazaars and craft workshops.",
     image: "/images/dest-india.jpg",
-    imageAlt: "Lake Pichola and historic lakeside buildings in Udaipur, India",
+    imageAlt: "Carved pink sandstone lattice windows on a palace facade in Jaipur, India",
   },
   {
     id: "malaysia",
@@ -39,7 +39,7 @@ export const destinations: Destination[] = [
     featuredCity: "Ubud",
     tagline: "Terraced rice fields and volcano sunrises.",
     image: "/images/dest-indonesia.jpg",
-    imageAlt: "Green rice terraces in Ubud",
+    imageAlt: "Aerial view of terraced rice fields on a hillside in Bali, Indonesia",
   },
   {
     id: "thailand",

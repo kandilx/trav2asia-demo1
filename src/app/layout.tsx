@@ -15,7 +15,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Trav2Asia — Go beyond the postcard",
+  title: "Trav2Asia — Local experiences in six Asian countries",
   description:
     "Discover local travel experiences in China, Japan, India, Malaysia, Indonesia and Thailand. A frontend-only demo.",
 };

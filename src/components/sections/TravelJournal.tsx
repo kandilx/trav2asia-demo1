@@ -9,13 +9,13 @@ export function TravelJournal() {
         <SectionHeading
           id="journal-heading"
           eyebrow="Travel journal"
-          title="Notes for before and after you go"
+          title="Notes on eating, buying and paddling well"
           description="Short guides from the Trav2Asia team, written for this demo."
         />
 
         <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
-          {journalEntries.map((entry, index) => (
-            <article key={entry.id} className={index === 1 ? "md:mt-12" : undefined}>
+          {journalEntries.map((entry) => (
+            <article key={entry.id}>
               <ExperienceImage
                 src={entry.image}
                 alt={entry.imageAlt}

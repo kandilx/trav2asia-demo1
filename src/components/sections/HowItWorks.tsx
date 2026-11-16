@@ -23,7 +23,7 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" aria-labelledby="how-heading" className="scroll-mt-20 bg-paper-deep py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <SectionHeading id="how-heading" eyebrow="How it works" title="Four steps from idea to demo booking" />
+        <SectionHeading id="how-heading" eyebrow="How it works" title="Four steps from search to demo confirmation" />
         <ol className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {steps.map((step, index) => (
             <li key={step.title} className="border-t-2 border-ink pt-5">

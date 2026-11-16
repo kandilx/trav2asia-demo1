@@ -24,7 +24,7 @@ export function WhyTrav2Asia() {
             <SectionHeading
               id="why-heading"
               eyebrow="Why Trav2Asia"
-              title="Local detail, presented clearly"
+              title="Hosts, group sizes and prices on one screen"
             />
             <p className="mt-6 text-base leading-relaxed text-ink-soft sm:text-lg">
               Trav2Asia is a fictional demo platform. It shows how a local-experience marketplace could present

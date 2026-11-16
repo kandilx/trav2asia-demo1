@@ -51,7 +51,7 @@ export const journalEntries: JournalEntry[] = [
     excerpt:
       "A shop shows you what was made. A workshop shows you how it was made, and by whom.",
     image: "/images/journal-2.jpg",
-    imageAlt: "Artisan potter shaping clay at a wheel in a workshop",
+    imageAlt: "A craftsman block-printing indigo patterns onto cloth in a workshop in Jaipur, India",
     body: [
       "Our workshops are chosen because the maker is there, not just the product. You will watch someone do the same motion they have repeated for years.",
       "The pace is slower on purpose. A session that takes two hours instead of one usually gives you more to remember.",
@@ -65,7 +65,7 @@ export const journalEntries: JournalEntry[] = [
     excerpt:
       "Water shoes, a dry bag and sunscreen you can reapply. Small choices make a long morning on the water much easier.",
     image: "/images/journal-3.jpg",
-    imageAlt: "Kayaker paddling into a limestone cave in Thailand",
+    imageAlt: "A red kayak on green water between limestone cliffs in Krabi, Thailand",
     body: [
       "Pack light and keep a dry bag for phones and cards. Most operators provide life vests, but not dry storage.",
       "Wear shoes you can get wet, and bring a hat. Shade on the water is limited, and the glare is stronger than it looks.",

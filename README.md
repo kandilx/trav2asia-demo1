@@ -46,7 +46,7 @@ Before sharing a public URL, read the licensing notes below.
 
 - **Group size filter.** Most experiences have a minimum group size of 2. A search for one traveller therefore excludes them. This is intentional, because it mirrors the mock inventory rules, but users may find it surprising. The results area shows the active filters, so they can be cleared.
 - **Unfilled photo slots.** Six slots have no approved photo yet: `exp-japan-kyoto-pottery`, `exp-india-udaipur-cycling`, `exp-malaysia-langkawi-kayak`, `exp-indonesia-bali-volcano-hike`, `exp-indonesia-bali-cooking-market`, and `spotlight-2`. Three of these experiences (Kyoto pottery, Langkawi kayak and Bali cooking) show a typographic fallback instead of a photo.
-- **Repeated photos.** Some images appear in more than one place. Batur, Ubud and Krabi are each used twice, and `hero-4` and `journal-2` are the same potter photo. These are listed in the manifest.
+- **Repeated photos.** Some images appear in more than one place. Two pairs of files are byte-identical: `hero-2.jpg` and `spotlight-1.jpg` (Batur volcano), and `dest-thailand.jpg` and `exp-thailand-bangkok-canal-market.jpg` (floating market). Pexels searches for alternatives returned 403, so these are kept and listed in the manifest.
 - **Location accuracy.** Several photos match the activity but not the exact city. The manifest records these as location-approximate.
 - **Design sign-off.** The palette and layouts have not been formally approved against the visual approval gate in the project specification (§12). This build proceeds on the brief as written.
 - **Accessibility.** Contrast and keyboard checks are partly done. Confirm the `orange-deep` error colour on paper before a public launch.

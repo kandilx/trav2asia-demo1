@@ -14,7 +14,7 @@ export function TravelerStories() {
         <SectionHeading
           id="stories-heading"
           eyebrow="Traveler stories"
-          title="What a good day looks like"
+          title="Demo traveller notes, not real reviews"
           description="These are fictional demo stories written for this prototype. They are not real customer reviews."
         />
 

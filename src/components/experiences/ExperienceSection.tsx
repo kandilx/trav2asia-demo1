@@ -56,15 +56,14 @@ export function ExperienceSection() {
         <SectionHeading
           id="experiences-heading"
           eyebrow="Featured experiences"
-          title="Small-group plans, led by locals"
+          title="Every card shows its group size and start times"
           description={`Browse ${experiences.length} demo experiences across six countries. Prices are in Canadian dollars and show the lowest per-person fare.`}
           align="split"
         />
 
-        <div className="mt-10 grid gap-4 border-y border-ink/15 py-5 md:grid-cols-[1fr_auto] md:items-end">
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-end">
-              <div className="flex-1">
+        <div className="mt-10 flex flex-col gap-5 border-y border-ink/15 py-5">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end">
+              <div className="min-w-0 flex-1">
                 <label htmlFor={searchId} className="text-sm font-bold">
                   Search experiences
                 </label>
@@ -76,6 +75,24 @@ export function ExperienceSection() {
                   placeholder="Try ‘kayak’, ‘Kyoto’ or ‘food’"
                   className="mt-1 block min-h-11 w-full border border-ink/40 bg-paper px-3 text-base placeholder:text-ink-soft/70 focus-visible:outline-offset-2"
                 />
+              </div>
+
+              <div className="w-full md:w-56">
+                <label htmlFor={sortId} className="text-sm font-bold">
+                  Sort by
+                </label>
+                <select
+                  id={sortId}
+                  value={state.sort}
+                  onChange={(event) => setSort(event.target.value as SortOrder)}
+                  className="mt-1 block min-h-11 w-full border border-ink/40 bg-paper px-3 text-base focus-visible:outline-offset-2"
+                >
+                  {sortOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
 
@@ -128,36 +145,6 @@ export function ExperienceSection() {
                 ) : null}
               </ul>
             ) : null}
-          </div>
-
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end md:flex-col md:items-end">
-            <div>
-              <label htmlFor={sortId} className="text-sm font-bold">
-                Sort by
-              </label>
-              <select
-                id={sortId}
-                value={state.sort}
-                onChange={(event) => setSort(event.target.value as SortOrder)}
-                className="mt-1 block min-h-11 w-full border border-ink/40 bg-paper px-3 text-base sm:w-56 focus-visible:outline-offset-2"
-              >
-                {sortOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {filtersActive ? (
-              <button
-                type="button"
-                onClick={resetFilters}
-                className="min-h-11 px-1 text-sm font-bold text-ink underline underline-offset-4 hover:text-orange-deep focus-visible:outline-offset-2"
-              >
-                Reset all filters
-              </button>
-            ) : null}
-          </div>
         </div>
 
         <div className="mt-6 flex flex-col gap-2 text-sm text-ink-soft sm:flex-row sm:items-center sm:justify-between" aria-live="polite">
@@ -166,7 +153,15 @@ export function ExperienceSection() {
               ? `Showing ${visible.length} of ${experiences.length} experiences`
               : `${results.length} of ${experiences.length} experiences for ${travelers} ${travelers === 1 ? "traveler" : "travelers"}`}
           </p>
-          {!filtersActive ? (
+          {filtersActive ? (
+            <button
+              type="button"
+              onClick={resetFilters}
+              className="min-h-11 self-start font-bold text-ink underline underline-offset-4 hover:text-orange-deep focus-visible:outline-offset-2 sm:self-auto"
+            >
+              Reset all filters
+            </button>
+          ) : (
             <button
               type="button"
               onClick={() => setShowAll((value) => !value)}
@@ -174,7 +169,7 @@ export function ExperienceSection() {
             >
               {showAll ? "Show featured six" : `View all ${experiences.length} experiences`}
             </button>
-          ) : null}
+          )}
         </div>
 
         {visible.length > 0 ? (

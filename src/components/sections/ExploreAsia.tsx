@@ -8,12 +8,12 @@ import { countForDestination } from "@/lib/catalog";
 import type { CountryId } from "@/types/trip";
 
 const layout: Record<CountryId, string> = {
-  japan: "sm:col-span-2 sm:row-span-2 aspect-[4/3] sm:aspect-auto",
   china: "aspect-[4/5]",
-  india: "aspect-[4/5] sm:mt-16",
-  indonesia: "aspect-[4/3] sm:col-span-2",
+  japan: "col-span-2 aspect-[4/3] sm:row-span-2 sm:aspect-auto",
+  india: "aspect-[4/5]",
   malaysia: "aspect-[4/5]",
-  thailand: "aspect-[4/3] sm:col-span-2 sm:mt-8",
+  indonesia: "aspect-[4/5]",
+  thailand: "col-span-2 aspect-[16/7] sm:col-span-4",
 };
 
 export function ExploreAsia() {

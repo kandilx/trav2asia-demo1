@@ -78,7 +78,7 @@ export const experiences: Experience[] = [
     description:
       "Walk the lanes around Yuyuan and the old French Concession, sampling xiaolongbao, scallion pancakes and sweet osmanthus desserts.",
     image: "/images/exp-china-shanghai-food-walk.jpg",
-    imageAlt: "Street vendor preparing traditional Chinese rice dumplings",
+    imageAlt: "Shanghai street vendor in an apron tending rice dumplings and skewers at a food stall",
     highlights: ["Dumplings made to order", "Old French Concession lanes", "Explanation of Shanghai breakfast traditions"],
     inclusions: ["Guided walk", "Tasting portions at five stops"],
     exclusions: ["Drinks", "Hotel pickup", "Gratuity"],
@@ -144,7 +144,7 @@ export const experiences: Experience[] = [
     description:
       "Explore the Pink City's bazaars on foot, visiting block-printing and jewellery workshops and a step well on the old caravan route.",
     image: "/images/exp-india-jaipur-artisan-walk.jpg",
-    imageAlt: "Heaps of hand-wrapped silk bangles in bright colours at a Jaipur market",
+    imageAlt: "A woman in a red headscarf selling clay pottery at a market in Jaipur, India",
     highlights: ["Block-printing workshop demonstration", "Visit to a working jewellery studio", "Stepwell photography stop"],
     inclusions: ["Licensed guide", "Bottled water", "Workshop visits"],
     exclusions: ["Monument entry tickets", "Purchases", "Gratuity"],
@@ -187,8 +187,8 @@ export const experiences: Experience[] = [
     priceCad: 62,
     description:
       "Ride along the edge of Lake Pichola before the city wakes, then climb to a viewpoint over the lakes as the light comes up.",
-    image: "/images/dest-india.jpg",
-    imageAlt: "Lake Pichola and historic lakeside buildings in Udaipur, India",
+    image: "/images/exp-india-udaipur-lake-sunrise.jpg",
+    imageAlt: "Sunrise light on Lake Pichola with Jag Mandir Palace in Udaipur, India",
     highlights: ["Dawn ride along the lake shore", "Viewpoint stop with chai", "Flat route suitable for beginners"],
     inclusions: ["Bicycle and helmet", "Guide", "Chai at the viewpoint"],
     exclusions: ["Breakfast", "Hotel pickup", "Gratuity"],

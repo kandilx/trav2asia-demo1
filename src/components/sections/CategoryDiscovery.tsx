@@ -23,7 +23,7 @@ export function CategoryDiscovery() {
         <SectionHeading
           id="activities-heading"
           eyebrow="Activity categories"
-          title="Start with what you want to do"
+          title="Pick an activity type, then a city"
           description="Each category opens the experience list already filtered, so you can compare options side by side."
         />
 
