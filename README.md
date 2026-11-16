@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trav2Asia
 
-## Getting Started
+A frontend-only demo landing page for **Trav2Asia**, a fictional platform for discovering local travel experiences in China, Japan, India, Malaysia, Indonesia and Thailand. It is built with Next.js App Router, strict TypeScript, Tailwind CSS, Motion and Lucide.
 
-First, run the development server:
+Nothing here is a real product. There is no booking, payment, authentication or live inventory. The experience catalogue, prices and testimonials are invented. The booking flow is a simulated confirmation, labelled as a demo.
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Other scripts:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command | Purpose |
+| --- | --- |
+| `npm run lint` | ESLint |
+| `npx tsc --noEmit` | Strict type check |
+| `npm run build` | Production build (`/` is statically prerendered) |
+| `npm test` | Unit tests (Vitest + Testing Library) |
+| `npm run test:e2e` | Playwright smoke tests and screenshots. Runs `npm run start` on port 3100, so run `npm run build` first. |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+If you rebuild while a `next start` process is still running, stop it first. A stale server serves old chunk URLs, which stops React from hydrating.
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app/` - layout, global CSS tokens, and the page composition.
+- `src/components/` - sections (`sections/`), search, experience cards and modal, trip state (`trip/`), layout, and UI primitives.
+- `src/data/` - typed mock data: 18 experiences, 6 destinations, editorial content.
+- `src/lib/catalog.ts` - pure filtering, sorting, and price helpers, with unit tests.
+- `e2e/` - Playwright specs.
+- `docs/asset-manifest.json` - source, licence, and alt text for every photo.
+- `docs/screenshots/` - mobile (375), tablet (768) and desktop (1440) captures from the e2e run.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploying to Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push the repository to GitHub, GitLab or Bitbucket.
+2. In Vercel, choose **Add New > Project** and import the repository.
+3. Keep the detected settings: framework preset Next.js, build command `next build`, output handled automatically. No environment variables are required.
+4. Deploy. Each push to the production branch creates a new deployment.
 
-## Deploy on Vercel
+Before sharing a public URL, read the licensing notes below.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Known issues and limitations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Group size filter.** Most experiences have a minimum group size of 2. A search for one traveller therefore excludes them. This is intentional, because it mirrors the mock inventory rules, but users may find it surprising. The results area shows the active filters, so they can be cleared.
+- **Unfilled photo slots.** Six slots have no approved photo yet: `exp-japan-kyoto-pottery`, `exp-india-udaipur-cycling`, `exp-malaysia-langkawi-kayak`, `exp-indonesia-bali-volcano-hike`, `exp-indonesia-bali-cooking-market`, and `spotlight-2`. Three of these experiences (Kyoto pottery, Langkawi kayak and Bali cooking) show a typographic fallback instead of a photo.
+- **Repeated photos.** Some images appear in more than one place. Batur, Ubud and Krabi are each used twice, and `hero-4` and `journal-2` are the same potter photo. These are listed in the manifest.
+- **Location accuracy.** Several photos match the activity but not the exact city. The manifest records these as location-approximate.
+- **Design sign-off.** The palette and layouts have not been formally approved against the visual approval gate in the project specification (§12). This build proceeds on the brief as written.
+- **Accessibility.** Contrast and keyboard checks are partly done. Confirm the `orange-deep` error colour on paper before a public launch.
+
+## Licensing and attribution
+
+- **Photography.** All photos come from [Pexels](https://www.pexels.com) under the Pexels License. Photographer names are not recorded for most images. The manifest flags these as "unknown (not captured)". Verify attribution before publishing, and replace any photo that cannot be confirmed.
+- **Typography.** DM Sans and Caveat are loaded with `next/font/google` and are licensed under the SIL Open Font License.
+- **Orange Lemonade** is referenced as a creative direction only. It is not embedded or shipped. Confirm its licence before using it in a public deployment, or keep the substitute.
+- **Content.** All brand names, experiences, prices, testimonials and stories are fictional. Do not present them as real.
