@@ -44,7 +44,7 @@ export function ExperienceCard({ experience, onOpen }: ExperienceCardProps) {
           <div>
             <p className="text-lg font-bold">{formatPrice(experience.priceCad)}</p>
             <p className="text-sm text-ink-soft">
-              {formatDuration(experience.durationMinutes)} · Demo rating {experience.demoRating.toFixed(1)}
+              {formatDuration(experience.durationMinutes)}
             </p>
           </div>
           <button

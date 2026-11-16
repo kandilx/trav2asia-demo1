@@ -15,7 +15,9 @@ export function SectionHeading({ eyebrow, title, id, description, align = "left"
           {title}
         </h2>
       </div>
-      {description ? <p className="text-base leading-relaxed text-ink-soft sm:text-lg">{description}</p> : null}
+      {description ? (
+        <p className={`text-base leading-relaxed text-ink-soft sm:text-lg ${align === "split" ? "" : "mt-4"}`}>{description}</p>
+      ) : null}
     </div>
   );
 }

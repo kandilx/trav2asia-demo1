@@ -34,7 +34,7 @@ export function TravelerStories() {
                   <button
                     type="button"
                     onClick={() => openExperience(experience.id)}
-                    className="mt-5 self-start text-sm font-bold underline underline-offset-4 hover:text-orange-deep focus-visible:outline-offset-2"
+                    className="mt-5 self-start text-left text-sm font-bold underline underline-offset-4 hover:text-orange-deep focus-visible:outline-offset-2"
                   >
                     About this experience: {experience.title}
                     <span className="sr-only"> in {countryName(experience.destinationId)}</span>

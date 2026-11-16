@@ -8,7 +8,7 @@ export function FinalCta() {
         <div className="max-w-2xl">
           <p className="text-xs font-bold tracking-[0.18em] text-ink uppercase">Ready when you are</p>
           <h2 id="cta-heading" className="mt-3 text-4xl leading-[1.02] font-bold tracking-tight text-balance sm:text-6xl">
-            Pick a city. Bring your appetite.
+            Pick a city. Choose how the day feels.
           </h2>
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-ink">
             Browse the demo catalogue of 18 experiences. Nothing here is a real booking.
